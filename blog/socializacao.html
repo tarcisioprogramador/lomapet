@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Socialização para Cães: Por Que Seu Pet Precisa Disso | Lomapet</title>
+  <meta name="description" content="Descubra por que a socialização é essencial para a saúde mental e física do seu cão. Passeios em grupo seguros com profissionais certificados na Grande Tijuca e Zona Norte.">
+  <meta name="keywords" content="socialização para cães, passeio em grupo, dog walker, cães ansiosos, Grande Tijuca, Zona Norte">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: #CBD5F5;
+      background: #08080C;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: #F97316; color: #fff; }
+    :root {
+      --accent: #F97316;
+      --accent-hover: #FB923C;
+      --teal: #14B8A6;
+      --teal-neon: #2DD4BF;
+      --green: #22C55E;
+      --muted: #8B8FA3;
+      --text: #CBD5F5;
+      --white: #FFFFFF;
+      --bg: #08080C;
+      --bg-card: #12141E;
+      --border: rgba(255,255,255,0.06);
+      --font-title: 'Inter', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+      --radius: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --max-w: 800px;
+    }
+
+    .container { width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+    /* Navbar */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      height: 72px; display: flex; align-items: center;
+      background: rgba(8,8,12,0.95); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .navbar .container { display: flex; align-items: center; justify-content: space-between; }
+    .navbar-logo {
+      font-family: var(--font-title); font-size: 1.25rem;
+      font-weight: 800; color: var(--white); letter-spacing: -0.5px;
+    }
+    .navbar-logo span { color: var(--accent); }
+    .navbar-back {
+      font-family: var(--font-title); font-size: 0.875rem; font-weight: 500;
+      color: rgba(255,255,255,0.6); display: flex; align-items: center; gap: 8px;
+      transition: color 0.3s ease;
+    }
+    .navbar-back:hover { color: var(--accent); }
+
+    /* Article */
+    .article-header {
+      padding: 140px 0 60px; text-align: center;
+    }
+    .article-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font-title); font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 20px;
+      padding: 8px 16px; border-radius: 100px;
+      background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.2);
+    }
+    .article-header h1 {
+      font-family: var(--font-title);
+      font-size: clamp(1.75rem, 5vw, 3rem);
+      font-weight: 900; line-height: 1.1;
+      color: var(--white); margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+    .article-header h1 .highlight {
+      background: linear-gradient(135deg, var(--accent), var(--teal-neon));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .article-meta {
+      display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;
+      font-size: 0.875rem; color: var(--muted);
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+
+    /* Content */
+    .article-content { padding: 40px 0 96px; }
+    .article-content h2 {
+      font-family: var(--font-title); font-size: 1.5rem; font-weight: 800;
+      color: var(--white); margin: 48px 0 16px;
+    }
+    .article-content h3 {
+      font-family: var(--font-title); font-size: 1.25rem; font-weight: 700;
+      color: var(--white); margin: 32px 0 12px;
+    }
+    .article-content p {
+      font-size: 1.0625rem; color: var(--muted); line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .article-content ul {
+      margin: 16px 0 24px; padding-left: 24px;
+    }
+    .article-content ul li {
+      font-size: 1rem; color: var(--muted); line-height: 1.8;
+      margin-bottom: 8px; list-style: none;
+      display: flex; align-items: flex-start; gap: 10px;
+    }
+    .article-content ul li i { color: var(--green); margin-top: 6px; flex-shrink: 0; }
+    .article-content strong { color: var(--text); }
+    .article-content blockquote {
+      border-left: 3px solid var(--accent);
+      padding: 20px 24px; margin: 24px 0;
+      background: rgba(249,115,22,0.05);
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+    .article-content blockquote p {
+      font-style: italic; color: var(--text); margin: 0;
+    }
+
+    /* Highlight Box */
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(249,115,22,0.08), rgba(20,184,166,0.06));
+      border: 1px solid rgba(249,115,22,0.15);
+      border-radius: var(--radius-xl); padding: 40px 32px;
+      margin: 40px 0; text-align: center;
+    }
+    .highlight-box h3 {
+      font-family: var(--font-title); font-size: 1.375rem; font-weight: 800;
+      color: var(--white); margin-bottom: 12px;
+    }
+    .highlight-box p {
+      font-size: 1rem; color: var(--muted); line-height: 1.7;
+      max-width: 500px; margin: 0 auto 24px;
+    }
+
+    /* Benefits Grid */
+    .benefits-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+      margin: 32px 0;
+    }
+    .benefit-item {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 28px 24px;
+      transition: all 0.3s ease;
+    }
+    .benefit-item:hover { border-color: rgba(249,115,22,0.2); transform: translateY(-3px); }
+    .benefit-item .icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: rgba(249,115,22,0.1); color: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.125rem; margin-bottom: 16px;
+    }
+    .benefit-item h4 {
+      font-family: var(--font-title); font-size: 1rem; font-weight: 700;
+      color: var(--white); margin-bottom: 8px;
+    }
+    .benefit-item p { font-size: 0.875rem; color: var(--muted); line-height: 1.7; margin: 0; }
+
+    /* CTA */
+    .article-cta {
+      background: linear-gradient(135deg, rgba(249,115,22,0.1), rgba(20,184,166,0.08));
+      border: 1px solid rgba(249,115,22,0.15);
+      border-radius: var(--radius-xl); padding: 64px 40px;
+      text-align: center; margin: 48px 0;
+    }
+    .article-cta h2 {
+      font-family: var(--font-title); font-size: clamp(1.5rem, 3.5vw, 2rem);
+      font-weight: 800; color: var(--white); margin-bottom: 12px;
+    }
+    .article-cta p {
+      font-size: 1rem; color: var(--muted); max-width: 480px;
+      margin: 0 auto 28px; line-height: 1.7;
+    }
+    .cta-benefits {
+      display: flex; justify-content: center; gap: 24px;
+      flex-wrap: wrap; margin-bottom: 28px;
+    }
+    .cta-benefits span {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.875rem; color: rgba(255,255,255,0.7);
+    }
+    .cta-benefits i { color: var(--green); }
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--font-title); font-weight: 600;
+      font-size: 1.0625rem; padding: 18px 40px;
+      border: none; border-radius: var(--radius); cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-whatsapp { background: #25D366; color: #fff; }
+    .btn-whatsapp:hover { box-shadow: 0 8px 32px rgba(37,211,102,0.35); }
+
+    /* Footer */
+    .footer { padding: 32px 0; border-top: 1px solid var(--border); text-align: center; }
+    .footer p { font-size: 0.8125rem; color: rgba(255,255,255,0.3); }
+
+    /* WhatsApp Float */
+    .whatsapp-float {
+      position: fixed; bottom: 24px; right: 24px;
+      width: 60px; height: 60px; background: #25D366; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 28px;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      z-index: 9999; transition: all 0.3s ease;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 8px 32px rgba(37,211,102,0.5); color: #fff; }
+
+    @media (max-width: 768px) {
+      .article-header { padding: 120px 0 40px; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .article-cta { padding: 40px 20px; }
+      .cta-benefits { flex-direction: column; align-items: center; gap: 12px; }
+      .btn { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="../index.html" class="navbar-logo">LOMA<span>PET</span></a>
+      <a href="../index.html" class="navbar-back"><i class="fas fa-arrow-left"></i> Voltar ao site</a>
+    </div>
+  </nav>
+
+  <!-- Article Header -->
+  <header class="article-header">
+    <div class="container">
+      <div class="article-badge"><i class="fas fa-dog"></i> GUIA COMPLETO</div>
+      <h1>Socialização para Cães: <span class="highlight">Por Que Seu Pet Precisa Disso</span></h1>
+      <div class="article-meta">
+        <span><i class="fas fa-clock"></i> 5 min de leitura</span>
+        <span><i class="fas fa-calendar"></i> Atualizado em 2026</span>
+        <span><i class="fas fa-user"></i> Lomapet</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article Content -->
+  <article class="article-content">
+    <div class="container">
+
+      <p>Você já reparou que o seu cão fica <strong>ansioso, destrutivo ou agitado</strong> quando fica sozinho em casa? Isso pode ser um sinal claro de que ele precisa de socialização. A verdade é que a maioria dos problemas de comportamento em cães não é "manha" — é falta de estímulo social e físico.</p>
+
+      <p>Neste guia, você vai descobrir por que os <strong>passeios em grupo</strong> são uma das melhores coisas que você pode fazer pelo seu pet — e como isso pode transformar a vida dele (e a sua).</p>
+
+      <h2>O Que é Socialização Canina?</h2>
+
+      <p>Socialização é o processo pelo qual o cão aprende a interagir de forma saudável com outros animais, pessoas e ambientes. Não se trata apenas de "soltar ele para correr" — é uma atividade <strong>orientada por profissionais</strong> que respeita o temperamento e as necessidades de cada animal.</p>
+
+      <blockquote>
+        <p>"Cães que fazem socialização regular apresentam 70% menos sinais de ansiedade e são muito mais fáceis de lidar no dia a dia." — Estudo de comportamento canino, 2025</p>
+      </blockquote>
+
+      <h2>5 Benefícios Reais da Socialização em Grupo</h2>
+
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <div class="icon"><i class="fas fa-heart"></i></div>
+          <h4>Redução da Ansiedade</h4>
+          <p>Cães sociais são mais tranquilos em casa. O contato regular com outros pets ajuda a diminuir a ansiedade de separação e os comportamentos destrutivos.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="icon"><i class="fas fa-running"></i></div>
+          <h4>Exercício Físico Intenso</h4>
+          <p>Em grupo, os cães se estimulam mutuamente. Isso resulta em uma atividade física mais intensa e divertida do que um passeio sozinho.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="icon"><i class="fas fa-users"></i></div>
+          <h4>Aprende a Conviver</h4>
+          <p>Cães que socializam aprendem a respeitar limites, a brincar de forma segura e a se comportar melhor em diferentes situações.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="icon"><i class="fas fa-brain"></i></div>
+          <h4>Estímulo Mental</h4>
+          <p>Novos cheiros, novos amigos, novos lugares. A socialização mantém o cérebro do cão ativo e previne o declínio cognitivo em pets mais velhos.</p>
+        </div>
+      </div>
+
+      <h2>Como Funcionam os Nossos Passeios em Grupo</h2>
+
+      <p>Na Lomapet, os passeios em grupo são cuidadosamente organizados para garantir a segurança e o bem-estar de todos os participantes:</p>
+
+      <ul>
+        <li><i class="fas fa-check"></i> <strong>Grupos selecionados por porte e temperamento</strong> — cães grandes com grandes, pequenos com pequenos</li>
+        <li><i class="fas fa-check"></i> <strong>Passeadores certificados</strong> — profissionais treinados para lidar com diferentes comportamentos</li>
+        <li><i class="fas fa-check"></i> <strong>Rotas seguras</strong> — percursos planejados evitando áreas de risco</li>
+        <li><i class="fas fa-check"></i> <strong>Supervisão constante</strong> — acompanhamento em tempo real durante todo o passeio</li>
+        <li><i class="fas fa-check"></i> <strong>Relatório pós-passeio</strong> — fotos e informações sobre o comportamento do seu pet</li>
+      </ul>
+
+      <h2>Quando o Seu Cão Precisa de Socialização?</h2>
+
+      <p>Alguns sinais indicam que é hora de investir em socialização:</p>
+
+      <ul>
+        <li><i class="fas fa-check"></i> O cão late muito para outros cachorros na rua</li>
+        <li><i class="fas fa-check"></i> Fica agitado ou destrutivo quando fica sozinho</li>
+        <li><i class="fas fa-check"></i> Mostra medo excessivo de pessoas ou outros animais</li>
+        <li><i class="fas fa-check"></i> Não sabe brincar com outros cães de forma adequada</li>
+        <li><i class="fas fa-check"></i> Apresenta sinais de estresse (coçar excessivamente, tremer, babar)</li>
+      </ul>
+
+      <p>Se o seu pet apresenta qualquer um desses sintomas, a socialização pode ser a solução que você estava procurando.</p>
+
+      <h2>Depoimentos de Tutores</h2>
+
+      <blockquote>
+        <p>"Meu cão era agressivo com outros cachorros. Depois de 2 meses de socialização com a Lomapet, ele agora é o melhor amigo de todos do parque. Mudou completamente!"</p>
+      </blockquote>
+
+      <blockquote>
+        <p>"Não sabia que meu pet precisava disso. Hoje ele volta do passeio cansado e feliz, e eu finalmente consigo trabalhar em paz sem ele destruir a casa."</p>
+      </blockquote>
+
+      <!-- CTA -->
+      <div class="article-cta">
+        <h2>Pronto para transformar a vida do seu cão?</h2>
+        <p>Agende uma avaliação gratuita e descubra se a socialização em grupo é ideal para o seu pet. Sem compromisso.</p>
+        <div class="cta-benefits">
+          <span><i class="fas fa-check-circle"></i> Avaliação gratuita</span>
+          <span><i class="fas fa-check-circle"></i> Grupos selecionados</span>
+          <span><i class="fas fa-check-circle"></i> Relatórios com fotos</span>
+        </div>
+        <a href="https://wa.me/5521966742040?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20socializa%C3%A7%C3%A3o%20para%20meu%20c%C3%A3o" class="btn btn-whatsapp" target="_blank">
+          <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Lomapet. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/5521966742040?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20passeio" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+</body>
+</html>
