@@ -429,7 +429,15 @@
       font-family: var(--font-title); font-size: 1rem;
       font-weight: 700; color: var(--white); margin-bottom: 6px;
     }
-    .audience-item p { font-size: 0.8125rem; color: var(--muted); line-height: 1.6; }
+    .audience-item p { font-size: 0.8125rem; color: var(--muted); line-height: 1.6; margin-bottom: 12px; }
+    .audience-item .saiba-mais {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: var(--font-title); font-size: 0.8125rem; font-weight: 600;
+      color: var(--accent); text-decoration: none; transition: all 0.3s;
+    }
+    .audience-item .saiba-mais:hover { gap: 10px; }
+    .audience-item .saiba-mais i { font-size: 0.75rem; transition: transform 0.3s; }
+    .audience-item .saiba-mais:hover i { transform: translateX(3px); }
 
     /* Process */
     .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
@@ -1172,41 +1180,49 @@
           <div class="icon">🐕</div>
           <h4>Tutores Ausentes</h4>
           <p>Trabalha o dia todo? Seu cão precisa de exercício e companhia durante a sua ausência.</p>
+          <a href="blog/dog-walker-tutores-ausentes.html" class="saiba-mais">Saiba Mais <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="audience-item">
           <div class="icon">🏠</div>
           <h4>Quem Viaja</h4>
           <p>Vai viajar e não pode levar o pet? Cuide dele com quem entende do assunto.</p>
+          <a href="blog/dog-walker-quem-viaja.html" class="saiba-mais">Saiba Mais <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="audience-item">
           <div class="icon">🐶</div>
           <h4>Cães Hiperativos</h4>
           <p>Cães com muita energia precisam de exercícios diários para manter a saúde e o comportamento.</p>
+          <a href="blog/dog-walker-caes-hiperativos.html" class="saiba-mais">Saiba Mais <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="audience-item">
           <div class="icon">👴</div>
           <h4>Idosos com Pets</h4>
           <p>Nem sempre é possível sair para passear. Nós fazemos isso com segurança e carinho.</p>
+          <a href="blog/dog-walker-idosos-com-pets.html" class="saiba-mais">Saiba Mais <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="audience-item">
           <div class="icon">👨‍👩‍👧‍👦</div>
           <h4>Famílias</h4>
           <p>Sua família cresceu e o tempo livre diminuiu? Mantenha o pet feliz sem sobrecarregar a rotina.</p>
+          <a href="blog/dog-walker-familias.html" class="saiba-mais">Saiba Mais <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="audience-item">
           <div class="icon">🏥</div>
           <h4>Pós-Cirúrgico</h4>
           <p>Cães em recuperação precisam de caminhadas leves e monitoradas para reabilitação.</p>
+          <a href="blog/dog-walker-pos-cirurgico.html" class="saiba-mais">Saiba Mais <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="audience-item">
           <div class="icon">🐕‍🦺</div>
           <h4>Raças Grande Porte</h4>
           <p>Cães de grande porte necessitam de mais exercício e espaço para queimar energia.</p>
+          <a href="blog/dog-walker-racas-grande-porte.html" class="saiba-mais">Saiba Mais <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="audience-item">
           <div class="icon">🐾</div>
           <h4>Cães Idosos</h4>
           <p>Pets mais velhos precisam de cuidados especiais e caminhadas adaptadas à sua condição.</p>
+          <a href="blog/dog-walker-caes-idosos.html" class="saiba-mais">Saiba Mais <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
     </div>
