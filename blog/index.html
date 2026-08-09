@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Dicas de Dog Walker e Pets | Lomapet</title>
+  <meta name="description" content="Blog da Lomapet — dicas sobre dog walker, passeios para cães, socialização, rastreamento GPS e cuidados com pets no Rio de Janeiro.">
+  <link rel="canonical" href="https://lomapet.vercel.app/blog/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blog — Dicas de Dog Walker e Pets | Lomapet">
+  <meta property="og:description" content="Blog da Lomapet — dicas sobre dog walker e cuidados com pets.">
+  <meta property="og:url" content="https://lomapet.vercel.app/blog/">
+  <meta property="og:site_name" content="Lomapet">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog — Dicas de Dog Walker e Pets | Lomapet">
+  <meta name="twitter:description" content="Blog da Lomapet — dicas sobre dog walker e cuidados com pets.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; color: #CBD5F5; background: #08080C; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    ::selection { background: #F97316; color: #fff; }
+    :root { --accent:#F97316; --teal-neon:#2DD4BF; --green:#22C55E; --muted:#8B8FA3; --text:#CBD5F5; --white:#FFF; --bg:#08080C; --bg-card:#12141E; --border:rgba(255,255,255,0.06); --font-title:'Inter',sans-serif; --font-body:'DM Sans',sans-serif; --radius:12px; --radius-lg:20px; --radius-xl:28px; --max-w:1100px; }
+    .container { width:100%; max-width:var(--max-w); margin:0 auto; padding:0 24px; }
+    .navbar { position:fixed; top:0; left:0; right:0; z-index:1000; height:72px; display:flex; align-items:center; background:rgba(8,8,12,0.95); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); }
+    .navbar .container { display:flex; align-items:center; justify-content:space-between; }
+    .navbar-logo { font-family:var(--font-title); font-size:1.25rem; font-weight:800; color:var(--white); letter-spacing:-0.5px; }
+    .navbar-logo span { color:var(--accent); }
+    .navbar-back { font-family:var(--font-title); font-size:0.875rem; font-weight:500; color:rgba(255,255,255,0.6); display:flex; align-items:center; gap:8px; transition:color 0.3s; }
+    .navbar-back:hover { color:var(--accent); }
+    .blog-header { padding:140px 0 60px; text-align:center; }
+    .blog-header h1 { font-family:var(--font-title); font-size:clamp(2rem,5vw,3.5rem); font-weight:900; line-height:1.1; color:var(--white); margin-bottom:16px; letter-spacing:-1px; }
+    .blog-header h1 .highlight { background:linear-gradient(135deg,var(--accent),var(--teal-neon)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .blog-header p { font-size:1.125rem; color:var(--muted); max-width:600px; margin:0 auto; }
+    .blog-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(320px,1fr)); gap:24px; padding:40px 0 96px; }
+    .blog-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-xl); overflow:hidden; transition:all 0.3s; text-decoration:none; }
+    .blog-card:hover { border-color:var(--accent); transform:translateY(-4px); box-shadow:0 12px 40px rgba(249,115,22,0.1); }
+    .blog-card-image { width:100%; height:200px; background:linear-gradient(135deg,rgba(249,115,22,0.15),rgba(45,212,191,0.15)); display:flex; align-items:center; justify-content:center; }
+    .blog-card-image i { font-size:3rem; color:var(--accent); opacity:0.5; }
+    .blog-card-content { padding:24px; }
+    .blog-card-tag { display:inline-block; font-family:var(--font-title); font-size:0.6875rem; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--accent); padding:4px 12px; border-radius:100px; background:rgba(249,115,22,0.1); border:1px solid rgba(249,115,22,0.2); margin-bottom:12px; }
+    .blog-card-content h2 { font-family:var(--font-title); font-size:1.25rem; font-weight:800; color:var(--white); margin-bottom:8px; line-height:1.3; }
+    .blog-card-content p { font-size:0.9375rem; color:var(--muted); line-height:1.6; margin:0; }
+    .blog-card-meta { display:flex; align-items:center; gap:16px; margin-top:16px; padding-top:16px; border-top:1px solid var(--border); font-size:0.8125rem; color:var(--muted); }
+    .blog-card-meta span { display:flex; align-items:center; gap:6px; }
+    .footer { text-align:center; padding:48px 0; border-top:1px solid var(--border); margin-top:48px; }
+    .footer p { font-size:0.875rem; color:var(--muted); }
+    .whatsapp-float { position:fixed; bottom:24px; right:24px; width:64px; height:64px; background:#25D366; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; box-shadow:0 4px 24px rgba(37,211,102,0.4); z-index:999; transition:transform 0.3s; }
+    .whatsapp-float:hover { transform:scale(1.1); }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar"><div class="container"><a href="../index.html" class="navbar-logo">LOMA<span>PET</span></a><a href="../index.html" class="navbar-back"><i class="fas fa-arrow-left"></i> Voltar ao site</a></div></nav>
+
+  <header class="blog-header">
+    <div class="container">
+      <h1>Blog <span class="highlight">Lomapet</span></h1>
+      <p>Dicas, guias e tudo o que você precisa saber sobre dog walker e cuidados com seu cão no Rio de Janeiro.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="blog-grid">
+
+      <a href="quanto-custa-dog-walker.html" class="blog-card">
+        <div class="blog-card-image"><i class="fas fa-dollar-sign"></i></div>
+        <div class="blog-card-content">
+          <span class="blog-card-tag">Guia de Preços</span>
+          <h2>Quanto Custa um Dog Walker no Rio?</h2>
+          <p>Valores de referência, fatores que influenciam o preço e por que pacotes mensais compensam mais.</p>
+          <div class="blog-card-meta">
+            <span><i class="fas fa-clock"></i> 5 min</span>
+            <span><i class="fas fa-calendar"></i> 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="dog-walker-como-funciona.html" class="blog-card">
+        <div class="blog-card-image"><i class="fas fa-paw"></i></div>
+        <div class="blog-card-content">
+          <span class="blog-card-tag">Guia Completo</span>
+          <h2>Dog Walker Como Funciona — Passo a Passo</h2>
+          <p>Entenda como o serviço funciona do início ao fim, desde o primeiro contato até o relatório pós-passeio.</p>
+          <div class="blog-card-meta">
+            <span><i class="fas fa-clock"></i> 5 min</span>
+            <span><i class="fas fa-calendar"></i> 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="dog-walker-vale-a-pena.html" class="blog-card">
+        <div class="blog-card-image"><i class="fas fa-heart"></i></div>
+        <div class="blog-card-content">
+          <span class="blog-card-tag">Vantagens</span>
+          <h2>Dog Walker Vale a Pena? 5 Motivos Reais</h2>
+          <p>Descubra por que um dog walker profissional faz diferença na vida do seu cão e na sua rotina.</p>
+          <div class="blog-card-meta">
+            <span><i class="fas fa-clock"></i> 4 min</span>
+            <span><i class="fas fa-calendar"></i> 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="como-escolher-dog-walker.html" class="blog-card">
+        <div class="blog-card-image"><i class="fas fa-search"></i></div>
+        <div class="blog-card-content">
+          <span class="blog-card-tag">Guia de Escolha</span>
+          <h2>Como Escolher um Dog Walker — 7 Dicas</h2>
+          <p>7 dicas essenciais para encontrar o profissional certo, com o que perguntar e o que observar.</p>
+          <div class="blog-card-meta">
+            <span><i class="fas fa-clock"></i> 5 min</span>
+            <span><i class="fas fa-calendar"></i> 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="dog-walker-rastreamento-gps.html" class="blog-card">
+        <div class="blog-card-image"><i class="fas fa-satellite-dish"></i></div>
+        <div class="blog-card-content">
+          <span class="blog-card-tag">Tecnologia</span>
+          <h2>Dog Walker com Rastreamento GPS</h2>
+          <p>Acompanhe cada passo do passeio do seu cão em tempo real pelo celular. Saiba como funciona.</p>
+          <div class="blog-card-meta">
+            <span><i class="fas fa-clock"></i> 4 min</span>
+            <span><i class="fas fa-calendar"></i> 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="dog-walker-para-filhotes.html" class="blog-card">
+        <div class="blog-card-image"><i class="fas fa-baby"></i></div>
+        <div class="blog-card-content">
+          <span class="blog-card-tag">Filhotes</span>
+          <h2>Dog Walker para Filhotes</h2>
+          <p>Primeiros passeios com cuidado, socialização precoce e adaptação para filhotes de todas as idades.</p>
+          <div class="blog-card-meta">
+            <span><i class="fas fa-clock"></i> 4 min</span>
+            <span><i class="fas fa-calendar"></i> 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="dog-walker-tijuca.html" class="blog-card">
+        <div class="blog-card-image"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="blog-card-content">
+          <span class="blog-card-tag">Localização</span>
+          <h2>Dog Walker em Tijuca</h2>
+          <p>Passeios profissionais na Grande Tijuca com rastreamento GPS e socialização em grupo.</p>
+          <div class="blog-card-meta">
+            <span><i class="fas fa-clock"></i> 4 min</span>
+            <span><i class="fas fa-calendar"></i> 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="dog-walker-vila-isabel.html" class="blog-card">
+        <div class="blog-card-image"><i class="fas fa-map-pin"></i></div>
+        <div class="blog-card-content">
+          <span class="blog-card-tag">Localização</span>
+          <h2>Dog Walker em Vila Isabel</h2>
+          <p>Passeios profissionais em Vila Isabel e bairros adjacentes da Grande Tijuca.</p>
+          <div class="blog-card-meta">
+            <span><i class="fas fa-clock"></i> 4 min</span>
+            <span><i class="fas fa-calendar"></i> 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="dog-walker-grajau.html" class="blog-card">
+        <div class="blog-card-image"><i class="fas fa-map-pin"></i></div>
+        <div class="blog-card-content">
+          <span class="blog-card-tag">Localização</span>
+          <h2>Dog Walker em Grajaú</h2>
+          <p>Passeios profissionais em Grajaú, Vila Valqueire e toda a região.</p>
+          <div class="blog-card-meta">
+            <span><i class="fas fa-clock"></i> 4 min</span>
+            <span><i class="fas fa-calendar"></i> 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="dog-walker-perto-de-mim.html" class="blog-card">
+        <div class="blog-card-image"><i class="fas fa-street-view"></i></div>
+        <div class="blog-card-content">
+          <span class="blog-card-tag">Guia Local</span>
+          <h2>Dog Walker Perto de Mim</h2>
+          <p>Como encontrar o melhor dog walker na sua região com checklist de 7 pontos.</p>
+          <div class="blog-card-meta">
+            <span><i class="fas fa-clock"></i> 5 min</span>
+            <span><i class="fas fa-calendar"></i> 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="passeios-diarios.html" class="blog-card">
+        <div class="blog-card-image"><i class="fas fa-shoe-prints"></i></div>
+        <div class="blog-card-content">
+          <span class="blog-card-tag">Serviço</span>
+          <h2>Passeios Diários para Cães</h2>
+          <p>Por que passeios diários são essenciais e como funcionam na prática.</p>
+          <div class="blog-card-meta">
+            <span><i class="fas fa-clock"></i> 4 min</span>
+            <span><i class="fas fa-calendar"></i> 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="socializacao.html" class="blog-card">
+        <div class="blog-card-image"><i class="fas fa-users"></i></div>
+        <div class="blog-card-content">
+          <span class="blog-card-tag">Serviço</span>
+          <h2>Socialização Canina</h2>
+          <p>Como a socialização em grupo ajuda no comportamento e na qualidade de vida do seu cão.</p>
+          <div class="blog-card-meta">
+            <span><i class="fas fa-clock"></i> 4 min</span>
+            <span><i class="fas fa-calendar"></i> 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="pet-sitter.html" class="blog-card">
+        <div class="blog-card-image"><i class="fas fa-home"></i></div>
+        <div class="blog-card-content">
+          <span class="blog-card-tag">Serviço</span>
+          <h2>Pet Sitter — O Que É e Como Funciona</h2>
+          <p>Quando seu cão precisa de cuidados em casa, o pet sitter é a solução.</p>
+          <div class="blog-card-meta">
+            <span><i class="fas fa-clock"></i> 4 min</span>
+            <span><i class="fas fa-calendar"></i> 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="adestramento.html" class="blog-card">
+        <div class="blog-card-image"><i class="fas fa-graduation-cap"></i></div>
+        <div class="blog-card-content">
+          <span class="blog-card-tag">Serviço</span>
+          <h2>Adestramento Básico</h2>
+          <p>Comandos básicos que todo cão deve saber e como o passeador ajuda nesse processo.</p>
+          <div class="blog-card-meta">
+            <span><i class="fas fa-clock"></i> 4 min</span>
+            <span><i class="fas fa-calendar"></i> 2026</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <footer class="footer"><div class="container"><p>&copy; 2026 Lomapet. Todos os direitos reservados.</p></div></footer>
+  <a href="https://wa.me/5521966742040?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20passeio" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</body>
+</html>
