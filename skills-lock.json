@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "skills": {
+    "agenda-prospeccao": {
+      "source": "ArrecheNeto/prospector-minimax",
+      "sourceType": "github",
+      "skillPath": "skills/agenda-prospeccao/SKILL.md",
+      "computedHash": "471dc22049ab4c5b5069afc40aa5468ac5eabbc1284ba2aaf8a8f863cc11f4d0"
+    },
+    "contrato-servico": {
+      "source": "ArrecheNeto/prospector-minimax",
+      "sourceType": "github",
+      "skillPath": "skills/contrato-servico/SKILL.md",
+      "computedHash": "877d44abfe537179030e5a0dedae44d380e46cf7d5578ab74779c2a95cf87b3e"
+    },
+    "dashboard-leads": {
+      "source": "ArrecheNeto/prospector-minimax",
+      "sourceType": "github",
+      "skillPath": "skills/dashboard-leads/SKILL.md",
+      "computedHash": "8dc97db7b8376b2990b18f9dc45eba3fe5d9f407a7c0908eea7d9bd1504f18bd"
+    },
+    "deploy-hostgator": {
+      "source": "ArrecheNeto/prospector-minimax",
+      "sourceType": "github",
+      "skillPath": "skills/deploy-hostgator/SKILL.md",
+      "computedHash": "2f0f20baa075c69b1fed2d9f9a54f12cae6637d3d2242197764a468d2cb5f6d0"
+    },
+    "midia-minimax": {
+      "source": "ArrecheNeto/prospector-minimax",
+      "sourceType": "github",
+      "skillPath": "skills/midia-minimax/SKILL.md",
+      "computedHash": "446e29767670bc1dbb689faf038e33d8380398b24a670efafe7a5addbf7893e0"
+    },
+    "proposta-gmail": {
+      "source": "ArrecheNeto/prospector-minimax",
+      "sourceType": "github",
+      "skillPath": "skills/proposta-gmail/SKILL.md",
+      "computedHash": "19cb979ae1141fe587f6cd051b0df2cbf8cc7e85c0caa543130440416c4b2af6"
+    },
+    "prospeccao-maps": {
+      "source": "ArrecheNeto/prospector-minimax",
+      "sourceType": "github",
+      "skillPath": "skills/prospeccao-maps/SKILL.md",
+      "computedHash": "fb489a2d2e36df8e62521506d810d1169086df9349e48542f03ab22736ebbfc0"
+    },
+    "prospector-setup": {
+      "source": "ArrecheNeto/prospector-minimax",
+      "sourceType": "github",
+      "skillPath": "skills/prospector-setup/SKILL.md",
+      "computedHash": "12f76149051e76a686e4bb47ca1ec4fdb5eebce09ff65860b307ffb93e9147a0"
+    },
+    "redesign-premium": {
+      "source": "ArrecheNeto/prospector-minimax",
+      "sourceType": "github",
+      "skillPath": "skills/redesign-premium/SKILL.md",
+      "computedHash": "6a1f57db69e2e9892b92100ba6a3b7fc3ef4de52dc90a9c10d0ee3f8d9a2b47a"
+    },
+    "time-prospector": {
+      "source": "ArrecheNeto/prospector-minimax",
+      "sourceType": "github",
+      "skillPath": "skills/time-prospector/SKILL.md",
+      "computedHash": "26d846c47890ecd6c89f555d2e649a75d50e2b6aaac73cc04473ee3def97e534"
+    }
+  }
+}

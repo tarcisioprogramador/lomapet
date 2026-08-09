@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dog Walker com Rastreamento GPS — Acompanhe em Tempo Real | Lomapet</title>
+  <meta name="description" content="Dog walker com rastreamento GPS em tempo real. Acompanhe cada passo do passeio do seu cão pelo celular. Saiba como funciona e por que é essencial.">
+  <link rel="canonical" href="https://lomapet.vercel.app/blog/dog-walker-rastreamento-gps.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Dog Walker com Rastreamento GPS — Acompanhe em Tempo Real | Lomapet">
+  <meta property="og:description" content="Dog walker com rastreamento GPS em tempo real. Acompanhe cada passo do passeio do seu cão.">
+  <meta property="og:url" content="https://lomapet.vercel.app/blog/dog-walker-rastreamento-gps.html">
+  <meta property="og:site_name" content="Lomapet">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dog Walker com Rastreamento GPS — Acompanhe em Tempo Real | Lomapet">
+  <meta name="twitter:description" content="Dog walker com rastreamento GPS em tempo real. Acompanhe cada passo do passeio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; color: #CBD5F5; background: #08080C; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    ::selection { background: #F97316; color: #fff; }
+    :root { --accent:#F97316; --teal-neon:#2DD4BF; --green:#22C55E; --muted:#8B8FA3; --text:#CBD5F5; --white:#FFF; --bg:#08080C; --bg-card:#12141E; --border:rgba(255,255,255,0.06); --font-title:'Inter',sans-serif; --font-body:'DM Sans',sans-serif; --radius:12px; --radius-lg:20px; --radius-xl:28px; --max-w:800px; }
+    .container { width:100%; max-width:var(--max-w); margin:0 auto; padding:0 24px; }
+    .navbar { position:fixed; top:0; left:0; right:0; z-index:1000; height:72px; display:flex; align-items:center; background:rgba(8,8,12,0.95); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); }
+    .navbar .container { display:flex; align-items:center; justify-content:space-between; }
+    .navbar-logo { font-family:var(--font-title); font-size:1.25rem; font-weight:800; color:var(--white); letter-spacing:-0.5px; }
+    .navbar-logo span { color:var(--accent); }
+    .navbar-back { font-family:var(--font-title); font-size:0.875rem; font-weight:500; color:rgba(255,255,255,0.6); display:flex; align-items:center; gap:8px; transition:color 0.3s; }
+    .navbar-back:hover { color:var(--accent); }
+    .article-header { padding:140px 0 60px; text-align:center; }
+    .article-badge { display:inline-flex; align-items:center; gap:8px; font-family:var(--font-title); font-size:0.75rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin-bottom:20px; padding:8px 16px; border-radius:100px; background:rgba(249,115,22,0.1); border:1px solid rgba(249,115,22,0.2); }
+    .article-header h1 { font-family:var(--font-title); font-size:clamp(1.75rem,5vw,3rem); font-weight:900; line-height:1.1; color:var(--white); margin-bottom:20px; letter-spacing:-1px; }
+    .article-header h1 .highlight { background:linear-gradient(135deg,var(--accent),var(--teal-neon)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .article-meta { display:flex; justify-content:center; gap:24px; flex-wrap:wrap; font-size:0.875rem; color:var(--muted); }
+    .article-meta span { display:flex; align-items:center; gap:6px; }
+    .article-content { padding:40px 0 96px; }
+    .article-content h2 { font-family:var(--font-title); font-size:1.5rem; font-weight:800; color:var(--white); margin:48px 0 16px; }
+    .article-content p { font-size:1.0625rem; color:var(--muted); line-height:1.8; margin-bottom:16px; }
+    .article-content ul { margin:16px 0 24px; padding-left:24px; }
+    .article-content ul li { font-size:1rem; color:var(--muted); line-height:1.8; margin-bottom:8px; list-style:none; display:flex; align-items:flex-start; gap:10px; }
+    .article-content ul li i { color:var(--green); margin-top:6px; flex-shrink:0; }
+    .article-content strong { color:var(--text); }
+    .article-content blockquote { border-left:3px solid var(--accent); padding:20px 24px; margin:24px 0; background:rgba(249,115,22,0.05); border-radius:0 var(--radius) var(--radius) 0; }
+    .article-content blockquote p { font-style:italic; color:var(--text); margin:0; }
+    .feature-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:16px; margin:24px 0; }
+    .feature-item { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); padding:24px; text-align:center; transition:border-color 0.3s; }
+    .feature-item:hover { border-color:var(--accent); }
+    .feature-item i { font-size:2rem; color:var(--accent); margin-bottom:12px; }
+    .feature-item h3 { font-family:var(--font-title); font-size:0.9375rem; font-weight:700; color:var(--white); margin-bottom:8px; }
+    .feature-item p { font-size:0.8125rem; color:var(--muted); margin:0; line-height:1.6; }
+    .faq-item { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); padding:24px; margin:12px 0; }
+    .faq-item h3 { font-family:var(--font-title); font-size:1rem; font-weight:700; color:var(--white); margin:0 0 8px; }
+    .faq-item p { font-size:0.9375rem; color:var(--muted); margin:0; line-height:1.7; }
+    .article-cta { text-align:center; padding:48px 32px; background:linear-gradient(135deg, rgba(249,115,22,0.08), rgba(45,212,191,0.08)); border:1px solid rgba(249,115,22,0.2); border-radius:var(--radius-xl); margin:48px 0; }
+    .article-cta h2 { font-family:var(--font-title); font-size:1.5rem; font-weight:800; color:var(--white); margin-bottom:12px; }
+    .article-cta p { font-size:1rem; color:var(--muted); margin-bottom:24px; }
+    .cta-benefits { display:flex; justify-content:center; gap:24px; flex-wrap:wrap; margin-bottom:24px; }
+    .cta-benefits span { font-size:0.8125rem; color:var(--text); display:flex; align-items:center; gap:6px; }
+    .cta-benefits i { color:var(--green); }
+    .btn { display:inline-flex; align-items:center; gap:10px; font-family:var(--font-title); font-weight:700; font-size:1rem; padding:16px 32px; border-radius:100px; text-decoration:none; transition:all 0.3s; }
+    .btn-whatsapp { background:#25D366; color:#fff; }
+    .btn-whatsapp:hover { background:#20BD5A; transform:translateY(-2px); box-shadow:0 8px 32px rgba(37,211,102,0.3); }
+    .footer { text-align:center; padding:48px 0; border-top:1px solid var(--border); margin-top:96px; }
+    .footer p { font-size:0.875rem; color:var(--muted); }
+    .whatsapp-float { position:fixed; bottom:24px; right:24px; width:64px; height:64px; background:#25D366; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; box-shadow:0 4px 24px rgba(37,211,102,0.4); z-index:999; transition:transform 0.3s; }
+    .whatsapp-float:hover { transform:scale(1.1); }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar"><div class="container"><a href="../index.html" class="navbar-logo">LOMA<span>PET</span></a><a href="../index.html" class="navbar-back"><i class="fas fa-arrow-left"></i> Voltar ao site</a></div></nav>
+
+  <header class="article-header">
+    <div class="container">
+      <div class="article-badge"><i class="fas fa-satellite-dish"></i> TECNOLOGIA</div>
+      <h1>Dog Walker com <span class="highlight">Rastreamento GPS</span> — Tempo Real</h1>
+      <div class="article-meta"><span><i class="fas fa-clock"></i> 4 min de leitura</span><span><i class="fas fa-calendar"></i> Atualizado em 2026</span></div>
+    </div>
+  </header>
+
+  <article class="article-content"><div class="container">
+    <p>Se você já pensou em contratar um <strong>dog walker</strong> mas tem medo de não saber onde seu cão está durante o passeio, a solução é o <strong>dog walker com rastreamento GPS</strong>. Com essa tecnologia, você acompanha cada passo em tempo real pelo celular.</p>
+
+    <p>O rastreamento GPS não é luxo — é <strong>segurança</strong>. É a garantia de que seu cão está sendo cuidado exatamente como foi combinado.</p>
+
+    <h2>Como Funciona o Rastreamento GPS?</h2>
+
+    <p>O passeador da Lomapet leva um celular com o aplicativo de rastreamento ativo. Antes do passeio, você recebe um <strong>link único</strong> pelo WhatsApp. Ao abrir o link, vê em tempo real:</p>
+
+    <div class="feature-grid">
+      <div class="feature-item">
+        <i class="fas fa-map-marked-alt"></i>
+        <h3>Mapa ao Vivo</h3>
+        <p>Veja exatamente por onde o passeador e seu cão estão andando, em tempo real.</p>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-road"></i>
+        <h3>Distância Percorrida</h3>
+        <p>Saiba quantos metros ou quilômetros o cão caminhou durante o passeio.</p>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-stopwatch"></i>
+        <h3>Tempo de Passeio</h3>
+        <p>Veja quanto tempo o cão passou caminhando, correndo ou descansando.</p>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-history"></i>
+        <h3>Histórico de Passeios</h3>
+        <p>Acesse o histórico de todos os passeios anteriores a qualquer momento.</p>
+      </div>
+    </div>
+
+    <blockquote><p>"O rastreamento GPS mudou tudo. Agora sei exatamente por onde meu cão passa, e posso até ver se o passeador seguiu a rota combinada."</p></blockquote>
+
+    <h2>Por Que GPS É Essencial?</h2>
+
+    <ul>
+      <li><i class="fas fa-check"></i> <strong>Segurança</strong> — se o cão se soltar, você sabe exatamente onde está</li>
+      <li><i class="fas fa-check"></i> <strong>Transparência</strong> — vê se o passeio realmente aconteceu como combinado</li>
+      <li><i class="fas fa-check"></i> <strong>Tranquilidade</strong> — não precisa ligar perguntando "onde está meu cão?"</li>
+      <li><i class="fas fa-check"></i> <strong>Controle</strong> — verifica se a rota passou por locais seguros</li>
+      <li><i class="fas fa-check"></i> <strong>Confiança</strong> — o profissional não tem nada a esconder quando mostra tudo</li>
+    </ul>
+
+    <h2>O Que Você Recebe Após o Passeio</h2>
+
+    <p>Além do rastreamento em tempo real, após cada passeio você recebe um <strong>relatório completo</strong> pelo WhatsApp:</p>
+
+    <ul>
+      <li><i class="fas fa-check"></i> <strong>Foto do cão</strong> durante o passeio</li>
+      <li><i class="fas fa-check"></i> <strong>Mapa do percurso</strong> com a rota completa</li>
+      <li><i class="fas fa-check"></i> <strong>Distância total</strong> percorrida</li>
+      <li><i class="fas fa-check"></i> <strong>Tempo total</strong> do passeio</li>
+      <li><i class="fas fa-check"></i> <strong>Observações</strong> sobre o comportamento do cão</li>
+    </ul>
+
+    <div class="faq-item">
+      <h3>Preciso instalar algum aplicativo?</h3>
+      <p>Não. Você recebe um link pelo WhatsApp e abre direto no navegador — sem necessidade de instalar nada.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>O GPS funciona em todas as regiões?</h3>
+      <p>Sim. O rastreamento funciona em qualquer lugar com cobertura de sinal de celular, o que inclui toda a Grande Tijuca e Zona Norte.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>E se o sinal cair durante o passeio?</h3>
+      <p>Raríssimo acontecer. Mas se acontecer, o aplicativo retoma o rastreamento automaticamente quando o sinal volta, sem perder dados.</p>
+    </div>
+
+    <div class="article-cta">
+      <h2>Experimente o rastreamento GPS</h2>
+      <p>Agende um passeio e veja como funciona na prática.</p>
+      <div class="cta-benefits">
+        <span><i class="fas fa-check-circle"></i> Rastreamento GPS incluso</span>
+        <span><i class="fas fa-check-circle"></i> Relatório com foto e mapa</span>
+        <span><i class="fas fa-check-circle"></i> Sem custo adicional</span>
+      </div>
+      <a href="https://wa.me/5521966742040?text=Ol%C3%A1!%20Gostaria%20de%20testar%20o%20dog%20walker%20com%20rastreamento%20GPS" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>
+    </div>
+  </div></article>
+
+  <footer class="footer"><div class="container"><p>&copy; 2026 Lomapet. Todos os direitos reservados.</p></div></footer>
+  <a href="https://wa.me/5521966742040?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20passeio" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</body>
+</html>
