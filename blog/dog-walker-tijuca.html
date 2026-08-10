@@ -1,26 +1,61 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dog Walker em Tijuca — Passeios Profissionais | Lomapet</title>
+  <title>Dog Walker em Tijuca — Passeios Profissionais na Grande Tijuca | Lomapet</title>
   <meta name="description" content="Dog walker em Tijuca com rastreamento GPS, passeios diários e socialização. Atendemos Vila Isabel, Grajaú, Alto da Boa Vista e toda a Grande Tijuca. Agende pelo WhatsApp.">
   <link rel="canonical" href="https://lomapet.vercel.app/blog/dog-walker-tijuca.html">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Dog Walker em Tijuca — Passeios Profissionais | Lomapet">
-  <meta property="og:description" content="Dog walker profissional em Tijuca e Grande Tijuca. Rastreamento GPS, passeios em grupo e socialização.">
+  <meta property="og:title" content="Dog Walker em Tijuca — Passeios Profissionais na Grande Tijuca | Lomapet">
+  <meta property="og:description" content="Dog walker em Tijuca com rastreamento GPS, passeios diários e socialização. Atendemos Vila Isabel, Grajaú, Alto da Boa Vista e toda a Grande Tijuca.">
   <meta property="og:url" content="https://lomapet.vercel.app/blog/dog-walker-tijuca.html">
   <meta property="og:site_name" content="Lomapet">
   <meta property="og:locale" content="pt_BR">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dog Walker em Tijuca — Passeios Profissionais | Lomapet">
-  <meta name="twitter:description" content="Dog walker profissional em Tijuca e Grande Tijuca. Rastreamento GPS e socialização em grupo.">
+  <meta name="twitter:title" content="Dog Walker em Tijuca — Passeios Profissionais na Grande Tijuca | Lomapet">
+  <meta name="twitter:description" content="Dog walker em Tijuca com rastreamento GPS, passeios diários e socialização.">
+  <meta property="og:image" content="https://lomapet.vercel.app/og-image.svg">
+  <meta name="twitter:image" content="https://lomapet.vercel.app/og-image.svg">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quanto custa um dog walker em Tijuca?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O valor de um dog walker em Tijuca varia conforme a frequencia e duracao dos passeios. A Lomapet oferece pacotes semanais e mensais com precos acessiveis, incluindo rastreamento GPS e relatorio com fotos. Entre em contato pelo WhatsApp para receber uma proposta personalizada."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A Lomapet atende bairros alem de Tijuca Centro?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. A Lomapet atende toda a Grande Tijuca, incluindo Alto da Boa Vista, Vila Isabel, Engenho Novo, Grajaú, Maracana, Sao Cristovao e Del Castilho. Nosso time de passeadores cobre uma ampla regiao para garantir conveniencia aos tutores."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funciona o rastreamento GPS dos passeios?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Durante cada passeio, o tutor acompanha a rota do cao em tempo real por meio de um link exclusivo. Ao final do passeio, recebe um relatorio completo com mapa da rota, duracao, distancia percorrida e fotos do cao aproveitando o passeio."
+        }
+      }
+    ]
+  }
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -42,7 +77,6 @@
     .article-meta span { display:flex; align-items:center; gap:6px; }
     .article-content { padding:40px 0 96px; }
     .article-content h2 { font-family:var(--font-title); font-size:1.5rem; font-weight:800; color:var(--white); margin:48px 0 16px; }
-    .article-content h3 { font-family:var(--font-title); font-size:1.125rem; font-weight:700; color:var(--text); margin:32px 0 12px; }
     .article-content p { font-size:1.0625rem; color:var(--muted); line-height:1.8; margin-bottom:16px; }
     .article-content ul { margin:16px 0 24px; padding-left:24px; }
     .article-content ul li { font-size:1rem; color:var(--muted); line-height:1.8; margin-bottom:8px; list-style:none; display:flex; align-items:flex-start; gap:10px; }
@@ -50,18 +84,28 @@
     .article-content strong { color:var(--text); }
     .article-content blockquote { border-left:3px solid var(--accent); padding:20px 24px; margin:24px 0; background:rgba(249,115,22,0.05); border-radius:0 var(--radius) var(--radius) 0; }
     .article-content blockquote p { font-style:italic; color:var(--text); margin:0; }
-    .neighborhood-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:16px; margin:24px 0; }
-    .neighborhood-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); padding:20px; text-align:center; transition:border-color 0.3s; }
-    .neighborhood-card:hover { border-color:var(--accent); }
-    .neighborhood-card i { font-size:1.5rem; color:var(--accent); margin-bottom:8px; }
-    .neighborhood-card h4 { font-family:var(--font-title); font-size:0.9375rem; font-weight:700; color:var(--white); margin-bottom:4px; }
-    .neighborhood-card p { font-size:0.8125rem; color:var(--muted); margin:0; }
-    .service-list { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:16px; margin:24px 0; }
-    .service-item { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); padding:24px; transition:border-color 0.3s; }
-    .service-item:hover { border-color:var(--accent); }
-    .service-item i { font-size:1.25rem; color:var(--accent); margin-bottom:12px; }
-    .service-item h4 { font-family:var(--font-title); font-size:0.9375rem; font-weight:700; color:var(--white); margin-bottom:8px; }
-    .service-item p { font-size:0.8125rem; color:var(--muted); margin:0; line-height:1.6; }
+    .neighborhood-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:16px; margin:24px 0; }
+    .neighborhood-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); padding:24px; transition:all 0.3s; }
+    .neighborhood-card:hover { border-color:rgba(249,115,22,0.3); transform:translateY(-2px); }
+    .neighborhood-card h3 { font-family:var(--font-title); font-size:1rem; font-weight:700; color:var(--white); margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+    .neighborhood-card h3 i { color:var(--accent); font-size:0.875rem; }
+    .neighborhood-card ul { list-style:none; padding:0; margin:0; }
+    .neighborhood-card ul li { font-size:0.875rem; color:var(--muted); line-height:1.7; padding-left:16px; position:relative; }
+    .neighborhood-card ul li::before { content:''; position:absolute; left:0; top:10px; width:6px; height:6px; border-radius:50%; background:var(--accent); }
+    .service-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:16px; margin:24px 0; }
+    .service-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); padding:24px; transition:all 0.3s; }
+    .service-card:hover { border-color:rgba(45,212,191,0.3); transform:translateY(-2px); }
+    .service-card .service-icon { width:48px; height:48px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.25rem; margin-bottom:14px; }
+    .service-card .service-icon.orange { background:rgba(249,115,22,0.15); color:var(--accent); }
+    .service-card .service-icon.teal { background:rgba(45,212,191,0.15); color:var(--teal-neon); }
+    .service-card h3 { font-family:var(--font-title); font-size:1rem; font-weight:700; color:var(--white); margin-bottom:8px; }
+    .service-card p { font-size:0.9375rem; color:var(--muted); margin:0; line-height:1.7; }
+    .steps-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:16px; margin:24px 0; }
+    .step-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); padding:24px; text-align:center; transition:all 0.3s; }
+    .step-card:hover { border-color:rgba(249,115,22,0.3); }
+    .step-number { width:48px; height:48px; background:linear-gradient(135deg,var(--accent),var(--teal-neon)); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-title); font-weight:800; font-size:1.125rem; color:var(--white); margin:0 auto 14px; }
+    .step-card h3 { font-family:var(--font-title); font-size:1rem; font-weight:700; color:var(--white); margin-bottom:8px; }
+    .step-card p { font-size:0.9375rem; color:var(--muted); margin:0; line-height:1.7; }
     .faq-item { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); padding:24px; margin:12px 0; }
     .faq-item h3 { font-family:var(--font-title); font-size:1rem; font-weight:700; color:var(--white); margin:0 0 8px; }
     .faq-item p { font-size:0.9375rem; color:var(--muted); margin:0; line-height:1.7; }
@@ -88,118 +132,188 @@
     <div class="container">
       <div class="article-badge"><i class="fas fa-map-marker-alt"></i> LOCAÇÃO</div>
       <h1>Dog Walker em <span class="highlight">Tijuca</span> — Passeios Profissionais</h1>
-      <div class="article-meta"><span><i class="fas fa-clock"></i> 4 min de leitura</span><span><i class="fas fa-calendar"></i> Atualizado em 2026</span></div>
+      <div class="article-meta"><span><i class="fas fa-clock"></i> 5 min de leitura</span><span><i class="fas fa-calendar"></i> Atualizado em 2026</span></div>
     </div>
   </header>
 
   <article class="article-content"><div class="container">
-    <p>Se você mora na <strong>Grande Tijuca</strong> e precisa de um <strong>dog walker profissional</strong> para cuidar do seu cão, a Lomapet atende toda a região com passeios diários, rastreamento GPS e socialização em grupo.</p>
+    <p>Tijuca é um dos bairros mais agradáveis do Rio de Janeiro para se viver com um cachorro. Com a imponente Floresta da Tijuca no coração do bairro, praças arborizadas como a Praça Afonso Pena e ruas residenciais tranquilas, a região oferece um cenário perfeito para os cães explorarem, farejarem e gastarem energia todos os dias. Mas a realidade do tutor carioca — longas jornadas de trabalho, trânsito e compromissos — faz com que muitos tutores não consigam dar ao seu pet o passeio diário que ele precisa. É aí que o <strong>dog walker em Tijuca</strong> entra como uma solução prática, segura e eficiente.</p>
 
-    <p>A Grande Tijuca é uma das regiões com mais demanda por <strong>dog walker no Rio de Janeiro</strong>. Com parques como o da Tijuca, a Floresta da Tijuca e praças arborizadas, a região oferece o cenário perfeito para passeios ao ar livre.</p>
+    <p>A Lomapet nasceu para atender justamente esse público: tutores que valorizam o bem-estar do seu cão mas não têm tempo disponível para passeios longos. Com um time de passeadores próprios, treinados e equipados com tecnologia de rastreamento GPS, oferecemos um serviço que vai muito além de simplesmente "levar o cachorro para caminhar". Aqui, cada passeio é planejado para garantir socialização adequada, exercício físico de qualidade e segurança em cada etapa.</p>
 
-    <h2>Por Que Escolher a Lomapet em Tijuca?</h2>
+    <p>Se você mora na Grande Tijuca e busca um <strong>dog walker Tijuca</strong> de confiança, este artigo vai te mostrar tudo o que precisa saber: bairros atendidos, como funciona o serviço, valores de referência e por que somos a escolha ideal para cuidar do seu melhor amigo.</p>
+
+    <h2>Por Que a Lomapet em Tijuca?</h2>
+
+    <p>Saber escolher um <strong>dog walker em Tijuca</strong> faz toda a diferença na experiência do seu cão. Nem todo serviço oferece o mesmo nível de cuidado e profissionalismo. A Lomapet se destaca por uma série de diferenciais que garantem tranquilidade para o tutor e diversão para o pet.</p>
 
     <ul>
-      <li><i class="fas fa-check"></i> <strong>Passeadores próprios</strong> — não terceirizamos. Cada profissional é treinado pela Lomapet</li>
-      <li><i class="fas fa-check"></i> <strong>Rastreamento GPS em tempo real</strong> — acompanhe cada passo do passeio pelo celular</li>
-      <li><i class="fas fa-check"></i> <strong>Relatório pós-passeio</strong> — distância, tempo, mapa do percurso e foto</li>
-      <li><i class="fas fa-check"></i> <strong>Socialização em grupo</strong> — o cão convive com outros dogs de forma segura e supervisionada</li>
-      <li><i class="fas fa-check"></i> <strong>Equipamento incluso</strong> — guia, coleira, água e petisqueira</li>
+      <li><i class="fas fa-check"></i> <strong>Passeadores próprios e treinados</strong> — todos os nossos profissionais são funcionários com treinamento contínuo em comportamento animal, primeiros socorros e manejo seguro de cães de diferentes portes e temperamentos.</li>
+      <li><i class="fas fa-check"></i> <strong>Rastreamento GPS em tempo real</strong> — durante cada passeio, você acompanha a rota do seu cão pelo celular. É a segurança que todo tutor merece ter.</li>
+      <li><i class="fas fa-check"></i> <strong>Relatório com fotos</strong> — ao final de cada passeio, o tutor recebe um relatório completo com mapa da rota, duração, distância percorrida e fotos do cão aproveitando o passeio.</li>
+      <li><i class="fas fa-check"></i> <strong>Socialização supervisionada</strong> — os cães interagem com outros pets de forma segura e controlada, promovendo bem-estar comportamental e reduzindo a ansiedade de separação.</li>
+      <li><i class="fas fa-check"></i> <strong>Equipamento profissional</strong> — coleiras reforçadas, tiras de controle e bolsas de primeiros socorros acompanham cada passeio para garantir segurança máxima.</li>
     </ul>
+
+    <blockquote><p>"Morava na Tijuca e nunca conseguia passear com meu golden nos dias de trabalho. Depois que comecei com a Lomapet, ele voltou a ser o cão mais disposto da rua. O relatório com fotos é o melhor moment do meu dia."</p></blockquote>
+
+    <p>Quando você contrata um <strong>dog walker na Grande Tijuca</strong> pela Lomapet, não está apenas pagando por um passeio. Está investindo em saúde, comportamento e qualidade de vida do seu animal de estimação. Cães que fazem passeios regulares apresentam menos problemas de obesidade, ansiedade e destruição em casa, além de serem mais sociáveis com outros animais e pessoas.</p>
 
     <h2>Bairros Atendidos na Grande Tijuca</h2>
 
-    <p>A Lomapet atende todos os bairros da Grande Tijuca e regiões adjacentes da Zona Norte:</p>
+    <p>A Lomapet atende uma ampla região da Grande Tijuca e bairros adjacentes. Nosso time de passeadores está distribuído estrategicamente para garantir pontualidade e familiaridade com as ruas, parques e praças de cada área. Confira os principais bairros atendidos:</p>
 
     <div class="neighborhood-grid">
       <div class="neighborhood-card">
-        <i class="fas fa-map-pin"></i>
-        <h4>Tijuca</h4>
-        <p>Alto da Boa Vista, Tijuca, Vila Isabel</p>
+        <h3><i class="fas fa-map-pin"></i> Tijuca</h3>
+        <ul>
+          <li>Alto da Boa Vista</li>
+          <li>Tijuca Centro</li>
+          <li>Abolição</li>
+          <li>Tijuca Mallet</li>
+        </ul>
       </div>
       <div class="neighborhood-card">
-        <i class="fas fa-map-pin"></i>
-        <h4>Vila Isabel</h4>
-        <p>Vila Isabel, Engenho Novo, Lins</p>
+        <h3><i class="fas fa-map-pin"></i> Vila Isabel</h3>
+        <ul>
+          <li>Vila Isabel Centro</li>
+          <li>Engenho Novo</li>
+          <li>Lins de Vasconcelos</li>
+          <li>Vila da Penha</li>
+        </ul>
       </div>
       <div class="neighborhood-card">
-        <i class="fas fa-map-pin"></i>
-        <h4>Grajaú</h4>
-        <p>Grajaú, Vila Valqueire, Cavalcanti</p>
+        <h3><i class="fas fa-map-pin"></i> Grajaú</h3>
+        <ul>
+          <li>Grajaú</li>
+          <li>Vila Valqueire</li>
+          <li>Cavalcanti</li>
+          <li>Piedade</li>
+        </ul>
       </div>
       <div class="neighborhood-card">
-        <i class="fas fa-map-pin"></i>
-        <h4>Maracanã</h4>
-        <p>Maracanã, São Cristóvão, Del Castilho</p>
+        <h3><i class="fas fa-map-pin"></i> Maracanã</h3>
+        <ul>
+          <li>Maracanã</li>
+          <li>São Cristóvão</li>
+          <li>Del Castilho</li>
+          <li>Higienópolis</li>
+        </ul>
       </div>
     </div>
+
+    <p>Se o seu bairro não aparece na lista, entre em contato conosco pelo WhatsApp. Estamos sempre expandindo nossa área de atuação e podemos avaliar se conseguimos incluir a sua região. O <strong>dog walker em Tijuca</strong> da Lomapet pode estar perto de você mais rápido do que imagina.</p>
 
     <h2>Nossos Serviços</h2>
 
-    <div class="service-list">
-      <div class="service-item">
-        <i class="fas fa-dog"></i>
-        <h4>Passeios Diários</h4>
-        <p>Passeios de 50 minutos ou 1 hora, com rota planejada e socialização em grupo quando o cão gosta de companhia.</p>
+    <p>A Lomapet oferece uma gama completa de serviços pensados para atender diferentes necessidades de tutores e cães na região de Tijuca. Cada serviço é executado com profissionalismo e cuidado, garantindo que o seu pet receba o melhor tratamento possível durante cada passeio.</p>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-icon orange"><i class="fas fa-shoe-prints"></i></div>
+        <h3>Passeios Diários</h3>
+        <p>Passeios regulares com duração adequada para cada porte. O cão caminha, fareja e socializa em rotas seguras pelos bairros da Grande Tijuca, mantendo a saúde física e mental em dia.</p>
       </div>
-      <div class="service-item">
-        <i class="fas fa-paw"></i>
-        <h4>Socialização</h4>
-        <p>Grupos pequeños e supervisionados para cães que se dão bem. Ajuda na sociabilização e reduz a ansiedade.</p>
+      <div class="service-card">
+        <div class="service-icon teal"><i class="fas fa-users"></i></div>
+        <h3>Socialização</h3>
+        <p>Encontros supervisionados com outros cães para promover interação saudável. Ideal para filhotes em fase de socialização ou cães que precisam aprender a conviver melhor com outros animais.</p>
       </div>
-      <div class="service-item">
-        <i class="fas fa-satellite-dish"></i>
-        <h4>Rastreamento GPS</h4>
-        <p>Acompanhe o passeio em tempo real pelo celular. Saiba exatamente por onde seu cão está andando.</p>
+      <div class="service-card">
+        <div class="service-icon orange"><i class="fas fa-satellite"></i></div>
+        <h3>Rastreamento GPS</h3>
+        <p>Acompanhe em tempo real a rota do seu cão durante o passeio. Você recebe um link exclusivo e vê exatamente por onde o passeador está caminhando com o seu animal.</p>
       </div>
-      <div class="service-item">
-        <i class="fas fa-camera"></i>
-        <h4>Relatório com Fotos</h4>
-        <p>Após cada passeio, você recebe um relatório com fotos, distância percorrida e mapa do percurso.</p>
+      <div class="service-card">
+        <div class="service-icon teal"><i class="fas fa-camera"></i></div>
+        <h3>Relatório com Fotos</h3>
+        <p>Após cada passeio, o tutor recebe um relatório completo: mapa da rota, tempo de caminhada, distância percorrida e fotos do cão feliz aproveitando o passeio.</p>
       </div>
     </div>
 
-    <blockquote><p>"Moro no Alto da Boa Vista e achei que não teria opção de dog walker na região. A Lomapet atende rápido e meu cão voltou diferente — mais calmo e feliz."</p></blockquote>
+    <p>Todos os nossos serviços incluem rastreamento GPS e relatório. Não cobramos extra por essas funcionalidades — elas fazem parte do padrão Lomapet. O <strong>dog walker Tijuca</strong> que você encontra aqui entrega transparência total do início ao fim de cada passeio.</p>
 
     <h2>Quanto Custa um Dog Walker em Tijuca?</h2>
 
-    <p>O valor de um <strong>dog walker em Tijuca</strong> depende da frequência e duração dos passeios. Para valores atualizados, fale com a gente pelo WhatsApp e monte um pacote personalizado.</p>
+    <p>O valor de um <strong>dog walker em Tijuca</strong> depende de fatores como frequência dos passeios, duração e necessidades específicas do cão. Na Lomapet, trabalhamos com pacotes semanais e mensais que se adaptam ao seu orçamento e rotina. Oferecemos descontos para tutores que contratam passeios regulares e para famílias com mais de um pet.</p>
 
-    <p>Em média, dog walkers profissionais na Grande Tijuca cobram entre <strong>R$ 60 e R$ 90</strong> por passeio avulso. Pacotes mensais costumam sair mais em conta — especialmente para quem precisa de 8 a 24 passeios por mês.</p>
+    <p>De modo geral, o investimento em um dog walker profissional na Grande Tijuca é acessível quando comparado aos custos de um hotel para animais ou a contratação de um cuidador eventual. A tranquilidade de saber que o seu cão está sendo cuidado por profissionais treinados, com rastreamento GPS e relatório, compensa qualquer valor.</p>
 
-    <h2>Como Funciona?</h2>
+    <p>Para conhecer os valores atualizados e receber uma proposta personalizada para o seu cão, acesse nosso artigo sobre <a href="quanto-custa-dog-walker.html" style="color:var(--accent); text-decoration:none; font-weight:600;">custos de dog walker</a> ou entre em contato diretamente pelo WhatsApp.</p>
 
-    <ul>
-      <li><i class="fas fa-check"></i> <strong>1. Agende pelo WhatsApp</strong> — fale com a gente e escolha o melhor horário</li>
-      <li><i class="fas fa-check"></i> <strong>2. Conheça o passeador</strong> — apresentamos o profissional que vai cuidar do seu cão</li>
-      <li><i class="fas fa-check"></i> <strong>3. Acompanhe pelo GPS</strong> — receba o link de rastreamento antes do passeio</li>
-      <li><i class="fas fa-check"></i> <strong>4. Receba o relatório</strong> — fotos, mapa e distância após cada passeio</li>
-    </ul>
+    <h2>Como Funciona</h2>
+
+    <p>Começar com a Lomapet é simples e rápido. Em poucos passos, o seu cão já estará aproveitando passeios profissionais em Tijuca.</p>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h3>Agende pelo WhatsApp</h3>
+        <p>Entre em contato, informe os dados do seu cão e escolha a frequência dos passeios. Montamos um plano sob medida.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h3>Conheça o Passeador</h3>
+        <p>Apresentamos o profissional que vai cuidar do seu cão. Você pode conversar com ele, tirar dúvidas e validar a compatibilidade.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h3>Acompanhe o GPS</h3>
+        <p>Durante o passeio, receba o link de rastreamento e veja em tempo real por onde o seu cão está caminhando.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">4</div>
+        <h3>Receba o Relatório</h3>
+        <p>Ao final do passeio, visualize o relatório completo com mapa, duração, distância e fotos do seu pet.</p>
+      </div>
+    </div>
+
+    <p>Todo esse processo é pensado para trazer segurança e tranquilidade ao tutor. O <strong>dog walker em Tijuca</strong> da Lomapet trabalha com transparência total, para que você nunca fique na dúvida sobre o que o seu cão está fazendo durante o passeio.</p>
+
+    <h2>Perguntas Frequentes</h2>
 
     <div class="faq-item">
-      <h3>Atendem em Tijuca Centro?</h3>
-      <p>Sim. Atendemos toda a Grande Tijuca, incluindo Tijuca Centro, Alto da Boa Vista, Vila Isabel, Grajaú e regiões adjacentes da Zona Norte.</p>
+      <h3>O passeador é funcionário próprio da Lomapet?</h3>
+      <p>Sim. Todos os nossos passeadores são funcionários com vínculo empregatício, treinamento contínuo e seguro de responsabilidade civil. Não trabalhamos com terceirização, garantindo maior controle sobre a qualidade e segurança do serviço.</p>
     </div>
 
     <div class="faq-item">
-      <h3>Posso agendar passeios em dias específicos?</h3>
-      <p>Claro. Você pode montar um pacote com os dias que precisar — segunda a sexta, três vezes por semana, ou qualquer combinação.</p>
+      <h3>E se o meu cão não se adaptar com o passeador?</h3>
+      <p>É totalmente normal haver um período de adaptação. Se o seu cão não se sentir confortável com o passeador designado, apresentamos outro profissional sem nenhum custo adicional. Nosso objetivo é garantir que tanto o tutor quanto o animal estejam satisfeitos.</p>
     </div>
 
     <div class="faq-item">
-      <h3>Meu cão é grande. Vocês atendem?</h3>
-      <p>Sim. Trabalhamos com cães de todos os portes. Nossos passeadores são treinados para lidar com cães grandes e com mais energia.</p>
+      <h3>Vocês atendem cães de qualquer porte?</h3>
+      <p>Sim. A Lomapet atende cães de todos os portes — de pequenos a gigantes. Cada passeio é adaptado ao porte, idade e condição física do animal, garantindo uma experiência segura e agradável para todos.</p>
     </div>
 
     <div class="article-cta">
       <h2>Agende o primeiro passeio do seu cão em Tijuca</h2>
-      <p>Fale com a gente pelo WhatsApp e comece hoje.</p>
+      <p>Dê ao seu pet os passeios profissionais que ele merece. Fale com a gente pelo WhatsApp e comece hoje mesmo.</p>
       <div class="cta-benefits">
-        <span><i class="fas fa-check-circle"></i> Orçamento sem compromisso</span>
-        <span><i class="fas fa-check-circle"></i> Primeiro passeio com desconto</span>
         <span><i class="fas fa-check-circle"></i> Rastreamento GPS incluso</span>
+        <span><i class="fas fa-check-circle"></i> Passeadores próprios e treinados</span>
+        <span><i class="fas fa-check-circle"></i> Sem contrato de fidelidade</span>
       </div>
       <a href="https://wa.me/5521966742040?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20passeio%20para%20meu%20c%C3%A3o%20em%20Tijuca" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>
+    </div>
+
+    <div class="related-articles" style="margin-top:48px; padding-top:32px; border-top:1px solid var(--border);">
+      <h3 style="font-family:var(--font-title); font-size:1.25rem; font-weight:700; color:var(--white); margin-bottom:20px;">Artigos Relacionados</h3>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:16px;">
+        <a href="dog-walker-vila-isabel.html" style="display:flex; align-items:center; gap:12px; padding:16px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); text-decoration:none; transition:all 0.3s;">
+          <i class="fas fa-arrow-right" style="color:var(--accent); font-size:0.875rem;"></i>
+          <span style="font-size:0.9375rem; color:var(--text); font-weight:500;">Dog Walker Vila Isabel</span>
+        </a>
+        <a href="dog-walker-grajau.html" style="display:flex; align-items:center; gap:12px; padding:16px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); text-decoration:none; transition:all 0.3s;">
+          <i class="fas fa-arrow-right" style="color:var(--accent); font-size:0.875rem;"></i>
+          <span style="font-size:0.9375rem; color:var(--text); font-weight:500;">Dog Walker Grajaú</span>
+        </a>
+        <a href="dog-walker-perto-de-mim.html" style="display:flex; align-items:center; gap:12px; padding:16px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); text-decoration:none; transition:all 0.3s;">
+          <i class="fas fa-arrow-right" style="color:var(--accent); font-size:0.875rem;"></i>
+          <span style="font-size:0.9375rem; color:var(--text); font-weight:500;">Dog Walker Perto de Mim</span>
+        </a>
+      </div>
     </div>
   </div></article>
 
