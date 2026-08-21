@@ -757,6 +757,22 @@
       display: flex; justify-content: space-between; flex-wrap: wrap;
       gap: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.25);
     }
+    .footer-credit {
+      margin-top: 16px; padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 0.75rem; color: rgba(255,255,255,0.3);
+      text-align: center;
+    }
+    .footer-credit a {
+      color: rgba(255,255,255,0.45);
+      font-weight: 600;
+      transition: color 0.3s ease;
+      display: inline;
+    }
+    .footer-credit a:hover { color: var(--accent); }
+    body.light-theme .footer-credit { color: #334155; }
+    body.light-theme .footer-credit a { color: #1E293B; }
+    body.light-theme .footer-credit a:hover { color: var(--accent); }
 
     /* WhatsApp Float */
     .whatsapp-float {
@@ -1675,6 +1691,9 @@
       <div class="footer-bottom">
         <span>&copy; 2026 Lomapet. Todos os direitos reservados.</span>
         <span>Feito com <i class="fas fa-heart" style="color:var(--accent);"></i> para os pets</span>
+      </div>
+      <div class="footer-credit">
+        Site desenvolvido por <a href="https://tarcisioprogramador.github.io/fabricadesoftware/index.html" target="_blank" rel="noopener noreferrer">Fábrica de Software</a>
       </div>
     </div>
   </footer>
